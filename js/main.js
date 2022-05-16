@@ -33,8 +33,8 @@ btnAdd.addEventListener("click", () => {
     studentKpi: inpKpi.value,
     studentMonthKpi: inpMonthKpi.value,
   };
-  createStudents(newStudent); // вызываем функуцию для добавления в базу данных и передаем в качестве аргумента обьект созданный выше
-  readStudents(); // для отображения даннх
+  createStudents(newStudent);
+  readStudents();
 });
 // ! ================= CREATE =====================
 function createStudents(student) {
@@ -56,13 +56,12 @@ function createStudents(student) {
 }
 
 // !=============== READ ====================
-// Создаём функцию для отображения
+
 function readStudents() {
-  //   отправляем запрос в db.json с настройками поиска и пагинации. знак q - нужен для того чтобы найти элемент во всей базе данных.знак & ставится если добавляем новые настройки к предыдущим. _page - для тошо чтобы открыть конкретную страницу. _limit - для отображения несколльких элементов на сайте
-  fetch(`${API}?q=${searchValue}&_page=${currentPage}&_limit=4`) // для получения данных из db.json
+  fetch(`${API}?q=${searchValue}&_page=${currentPage}&_limit=4`)
     .then((res) => res.json())
     .then((data) => {
-      sectionKpi.innerHTML = ""; // очищаем тег section чтобы не было дубликатов
+      sectionKpi.innerHTML = "";
       data.forEach((item) => {
         sectionKpi.innerHTML += `
           <div class="card mt-3" style="width: 18rem;">
@@ -84,23 +83,21 @@ function readStudents() {
           </div>
           `;
       });
-      sumPage(); // вызов функции для нахождения кол-во страниц
+      sumPage();
     });
 }
 readStudents();
 //! DELETE
 document.addEventListener("click", (event) => {
-  let del_class = [...event.target.classList]; //сохраняем массив с классами в переменную, используя spread оператор
+  let del_class = [...event.target.classList];
   if (del_class.includes("btnDelete")) {
-    // проверяет есть ли в нашем поиске класс btnDelete
-    let del_id = event.target.id; //сохраняем в переменную id нашего элемента по которому кликнули
+    let del_id = event.target.id;
     fetch(`${API}/${del_id}`, {
       method: "DELETE",
-    }).then(() => readStudents()); // для того чтобы вызов функции отображения данных подождал пока запрос delete выполнился а затем сработал
+    }).then(() => readStudents());
   }
 });
 //! EDIT
-//сохраняем в переменные названия инпутов и кнопки
 let editInpName = document.getElementById("editInpName");
 let editInpLastName = document.getElementById("editInpLastName");
 let editInpNumber = document.getElementById("editInpNumber");
@@ -110,17 +107,13 @@ let editBtnSave = document.getElementById("editBtnSave");
 let editSectionKpi = document.getElementById("editSectionKpi");
 let editInpImage = document.getElementById("editInpImage");
 
-// событие на кнопку изменить
 document.addEventListener("click", (event) => {
-  // с помощью обьекта event ищем класс нашего элемента
   let editArr = [...event.target.classList];
   if (editArr.includes("btnEdit")) {
-    // проверем есть ли в массиве с классами наш класс btnEdit
-    let id = event.target.id; // сохраняем в переменную id,ша нашего элемента
-    fetch(`${API}/${id}`) // с помощью запроса GET обращаемся к конкретному обьекту
+    let id = event.target.id;
+    fetch(`${API}/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        // созраняем в инпуты модального окна данные из db,json
         editInpName.value = data.studentName;
         editInpLastName.value = data.studentLastName;
         editInpNumber.value = data.studentNumber;
@@ -128,13 +121,11 @@ document.addEventListener("click", (event) => {
         editInpKpi.value = data.studentKpi;
         editInpMonthKpi.value = data.studentMonthKpi;
 
-        // добавляем при помощи метода setAttribute id в нашу кнопку сохранить дл того чтобы передать в дальнейшем в аргументы функции editBook
         editBtnSave.setAttribute("id", data.id);
       });
   }
-}); //событие на кнопку сохранить
+});
 editBtnSave.addEventListener("click", () => {
-  // создаем обьект с измененными данными и в дальнейшем для отправки db.json
   let editedStudent = {
     studentName: editInpName.value,
     studentLastName: editInpLastName.value,
@@ -144,26 +135,24 @@ editBtnSave.addEventListener("click", () => {
     studentMonthKpi: editInpMonthKpi.value,
   };
   console.log(editedStudent);
-  editBook(editedStudent, editBtnSave.id); // вызов функции для отправки измененных данных в db.json в качестве аргумента передаем вышесозданный обьект и значение атрибута id из кнопки сохранить
+  editBook(editedStudent, editBtnSave.id);
 });
 function editBook(objEditStudent, id) {
-  // функция для отправки измененных данных в db.json
   fetch(`${API}/${id}`, {
-    // в параметры принимаем: измененный обьект и id jп котрому будем обращаться
-    method: "PATCH", // используем метод PATCH для запроса на изменение данных на db.json
+    method: "PATCH",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
     },
     body: JSON.stringify(objEditStudent),
-  }).then(() => readStudents()); // вызов функции для отображения данных сразу же после нажатия на кнопку сохранить
+  }).then(() => readStudents());
 }
 //! SEARCH
-//сохраняем в переменную инпут поиска из inde.html
+
 let inpSearch = document.getElementById("inpSearch");
 
 inpSearch.addEventListener("input", (event) => {
-  searchValue = event.target.value; // сохраняем в  переменную значение инпута
-  readStudents(); // вызываем функцию для отображения данных и сразу же после изменения инпута Поиск
+  searchValue = event.target.value;
+  readStudents();
 });
 //! =================PAGINATION======================
 
