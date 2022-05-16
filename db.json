@@ -1,0 +1,121 @@
+{
+  "students": [
+    {
+      "studentName": "Мээрим",
+      "studentImage": "https://icon-library.com/images/female-profile-icon/female-profile-icon-6.jpg",
+      "studentLastName": "Аманова",
+      "studentNumber": "+996551165360",
+      "studentKpi": "Недельный KPI: 80",
+      "studentMonthKpi": "Месячный KPI:90",
+      "id": 1
+    },
+    {
+      "studentName": "Актилек",
+      "studentImage": "https://images.unsplash.com/photo-1563062067-7700e1d9ae1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80",
+      "studentLastName": "Насиров",
+      "studentNumber": "+9965561678865",
+      "studentKpi": " Недельный KPI:89",
+      "studentMonthKpi": "Месячный KPI:100",
+      "id": 2
+    },
+    {
+      "studentName": "Камила",
+      "studentImage": "https://icon-library.com/images/female-profile-icon/female-profile-icon-6.jpg",
+      "studentLastName": "Ирсалиева",
+      "studentNumber": "+996556165565",
+      "studentKpi": " Недельный KPI:85",
+      "studentMonthKpi": "Месячный KPI:90",
+      "id": 3
+    },
+    {
+      "studentName": "Канат",
+      "studentImage": "https://previews.123rf.com/images/richcat/richcat1112/richcat111200006/11479159-graphic-illustration-of-man-in-business-suit-as-user-icon-avatar.jpg",
+      "studentLastName": "Султаналиев",
+      "studentNumber": "+996770503005",
+      "studentKpi": "Недельный KPI: 83",
+      "studentMonthKpi": "Месячный KPI:91",
+      "id": 4
+    },
+    {
+      "studentName": "Айдар ",
+      "studentImage": "https://previews.123rf.com/images/richcat/richcat1112/richcat111200006/11479159-graphic-illustration-of-man-in-business-suit-as-user-icon-avatar.jpg",
+      "studentLastName": "Кадырбеков",
+      "studentNumber": "+996551165360",
+      "studentKpi": "Недельный KPI: 80",
+      "studentMonthKpi": "Месячный KPI:90",
+      "id": 5
+    },
+    {
+      "studentName": "Эмир",
+      "studentImage": "https://previews.123rf.com/images/richcat/richcat1112/richcat111200006/11479159-graphic-illustration-of-man-in-business-suit-as-user-icon-avatar.jpg",
+      "studentLastName": "Маматкулов",
+      "studentNumber": "+996554456656",
+      "studentKpi": "Недельный KPI: 70",
+      "studentMonthKpi": "Месячный KPI:80",
+      "id": 6
+    },
+    {
+      "studentName": "Улан",
+      "studentImage": "https://previews.123rf.com/images/richcat/richcat1112/richcat111200006/11479159-graphic-illustration-of-man-in-business-suit-as-user-icon-avatar.jpg",
+      "studentLastName": "Замир уулу ",
+      "studentNumber": "+996551675360",
+      "studentKpi": "Недельный KPI: 70",
+      "studentMonthKpi": "Месячный KPI:78",
+      "id": 7
+    },
+    {
+      "studentName": " Тахмина ",
+      "studentImage": "https://icon-library.com/images/female-profile-icon/female-profile-icon-6.jpg",
+      "studentLastName": "Кунанбекова",
+      "studentNumber": "+996555665360",
+      "studentKpi": "Недельный KPI: 72",
+      "studentMonthKpi": "Месячный KPI:75",
+      "id": 8
+    },
+    {
+      "studentName": "Айбат",
+      "studentImage": "https://previews.123rf.com/images/richcat/richcat1112/richcat111200006/11479159-graphic-illustration-of-man-in-business-suit-as-user-icon-avatar.jpg",
+      "studentLastName": "Ивагов",
+      "studentNumber": "+996551165360",
+      "studentKpi": "Недельный KPI: 56",
+      "studentMonthKpi": "Месячный KPI:82",
+      "id": 9
+    },
+    {
+      "studentName": "Айбек",
+      "studentImage": "https://previews.123rf.com/images/richcat/richcat1112/richcat111200006/11479159-graphic-illustration-of-man-in-business-suit-as-user-icon-avatar.jpg",
+      "studentLastName": "Джумашев",
+      "studentNumber": "+9965511653677",
+      "studentKpi": "Недельный KPI: 80",
+      "studentMonthKpi": "Месячный KPI:95",
+      "id": 10
+    },
+    {
+      "studentName": "Камила",
+      "studentImage": "https://icon-library.com/images/female-profile-icon/female-profile-icon-6.jpg",
+      "studentLastName": "Ибраимова",
+      "studentNumber": "+996551167660",
+      "studentKpi": "Недельный KPI: 71",
+      "studentMonthKpi": "Месячный KPI:98",
+      "id": 11
+    },
+    {
+      "studentName": "Борис",
+      "studentImage": "https://previews.123rf.com/images/richcat/richcat1112/richcat111200006/11479159-graphic-illustration-of-man-in-business-suit-as-user-icon-avatar.jpg",
+      "studentLastName": "Зобнин",
+      "studentNumber": "+996551165355",
+      "studentKpi": "Недельный KPI: 78",
+      "studentMonthKpi": "Месячный KPI:99",
+      "id": 12
+    },
+    {
+      "studentName": "Илика",
+      "studentImage": "https://icon-library.com/images/female-profile-icon/female-profile-icon-6.jpg",
+      "studentLastName": "Нургелди кызы",
+      "studentNumber": "+996551165360",
+      "studentKpi": "Недельный KPI: 80",
+      "studentMonthKpi": "Месячный KPI:90",
+      "id": 13
+    }
+  ]
+}

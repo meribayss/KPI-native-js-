@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- !css bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- !css link -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- !NAVBAR START -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Makers KPI </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Студенты</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Поиск"
+              aria-label="Search"
+              id="inpSearch"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              Поиск
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- !NAVBAR FINISH -->
+    <!--! ADD PANEL START -->
+    <div class="accordion accordion-flush " id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            Добавить студента +
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <input
+              class="form-control me-2"
+              id="inpName"
+              type="text"
+              placeholder="Имя студента"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="inpLastName"
+              type="Автор"
+              placeholder="Фамилия студента"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="inpNumber"
+              type="text"
+              placeholder="Номер телефона"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="inpKpi"
+              type="text"
+              placeholder="показатели недельного KPI"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="inpMonthKpi"
+              type="text"
+              placeholder="показатели месячного KPI"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="inpImage"
+              type="text"
+              placeholder="фотография студента"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-dark text-light"
+              id="btnAdd"
+              type="submit"
+            >
+              Добавить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--! ADD PANEL FINISH -->
+    
+    </section>
+    <!-- ! section-2 -->
+    <!--! SECTION KPI START -->
+    <section
+      class="container mt-3 d-flex flex-wrap justify-content-between"
+      id="sectionKpi"
+    ></section>
+    <!--! SECTION KPI FINISH -->
+    <!-- ! EDIT MODAL START -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Редактирование</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              class="form-control me-2"
+              id="editInpName"
+              type="text"
+              placeholder="Имя студента"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="editInpLastName"
+              type="Автор"
+              placeholder="Фамилия студента"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="editInpNumber"
+              type="text"
+              placeholder="Номер студента"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="editInpImage"
+              type="text"
+              placeholder="Фотография студента"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="editInpKpi"
+              type="text"
+              placeholder="показатели недельного KPI"
+              aria-label="Search"
+            />
+            <input
+              class="form-control me-2"
+              id="editInpMonthKpi"
+              type="text"
+              placeholder="показатели месячного KPI"
+              aria-label="Search"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary btnSave"
+              id="editBtnSave"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Сохранить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !EDIT MODAL FINISH -->
+    <!-- !PAGINATION START  -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" id="prevBtn" href="#">Previous</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" id="nextBtn" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+    <!--! PAGINATION FINISH  -->
+
+    <!-- !FOOTER START -->
+    <!-- Footer -->
+
+    <footer class="footer bg-dark">
+      <div class="footer__decoration">
+        <div class="decoration">
+          <img
+            class="footer__decoration1"
+            src="./images/js-circle-black-design-logo-30.png"
+            alt="makers"
+          />
+          <img
+            class="footer__decoration2"
+            src="./images/5fa63ceffc6e3566d8b699aa_logo (1).svg"
+            alt="js"
+          />
+        </div>
+      </div>
+
+      <div class="container footer__content">
+        <div class="footer__inner">
+          <!-- <img
+            src="./img/footer/footer__logo.svg"
+            alt=""
+            class="footer__logo"
+          /> -->
+        </div>
+
+        <div class="footer__text">
+          <div class="footer__right">
+            <div id="footer__text1" class="footer__texts">
+              <span class="footer__title">Company</span>
+              <p class="footer__p footer__a">Makers</p>
+            </div>
+
+            <div class="footer__texts">
+              <span class="footer__title">Support</span>
+              <p class="footer__p footer__a">FAQ</p>
+              <p class="footer__p">Terms of Service</p>
+              <p class="footer__p">Privacy Policy</p>
+            </div>
+
+            <div class="footer__texts">
+              <span class="footer__title">Follow Us</span>
+              <p class="footer__p footer__a">Twitter</p>
+              <p class="footer__p">Instagram</p>
+              <p class="footer__p">Facebook</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ! FOOTER FINISH -->
+
+    <!-- !JS Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- !JS main.js -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
